@@ -24,9 +24,9 @@ export default function About() {
 
   const values = [
     { icon: Heart, title: 'Personalized Care', description: 'Tailored treatments for your unique beauty journey' },
-    { icon: Award, title: 'Expert Team', description: 'Licensed professionals with years of experience' },
-    { icon: Sparkles, title: 'Premium Results', description: 'Cutting-edge technology and proven techniques' },
-    { icon: Users, title: 'Community Focus', description: 'Building confidence and lasting relationships' },
+    { icon: Award, title: 'Expert Team', description: 'Board-certified professionals with proven results' },
+    { icon: Sparkles, title: 'Premium Products', description: 'FDA-approved treatments and medical-grade care' },
+    { icon: Users, title: 'Client-Centered', description: 'Your comfort, safety, and satisfaction come first' },
   ];
 
   return (
@@ -40,23 +40,23 @@ export default function About() {
           >
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Spa treatment"
+                src="https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Medical spa treatment"
                 className="rounded-lg shadow-lg object-cover h-64 w-full"
               />
               <img
-                src="https://images.pexels.com/photos/3997349/pexels-photo-3997349.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Facial treatment"
+                src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Injectable treatment"
                 className="rounded-lg shadow-lg object-cover h-64 w-full mt-8"
               />
               <img
-                src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Relaxation"
+                src="https://images.pexels.com/photos/3738369/pexels-photo-3738369.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Skincare consultation"
                 className="rounded-lg shadow-lg object-cover h-64 w-full -mt-8"
               />
               <img
-                src="https://images.pexels.com/photos/3985347/pexels-photo-3985347.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Skincare"
+                src="https://images.pexels.com/photos/7195133/pexels-photo-7195133.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Aesthetic treatment"
                 className="rounded-lg shadow-lg object-cover h-64 w-full"
               />
             </div>
@@ -68,16 +68,13 @@ export default function About() {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-sage-900 mb-6">
-              Welcome to Glow Tribe
+              Where Expertise Meets Artistry
             </h2>
             <p className="text-lg text-sage-700 mb-6 leading-relaxed">
-              At Glow Tribe, we believe that true beauty radiates from within. Our medical spa combines the latest
-              aesthetic treatments with a holistic approach to wellness, creating a sanctuary where you can relax,
-              rejuvenate, and rediscover your natural glow.
+              At Glow Tribe, we believe beauty is personal. Our board-certified team brings over 15 years of experience in aesthetic medicine, combining clinical expertise with an artist's eye to deliver natural, confidence-boosting results.
             </p>
             <p className="text-lg text-sage-700 mb-8 leading-relaxed">
-              Founded on the principles of authenticity and excellence, our team of licensed professionals is
-              dedicated to helping you achieve your aesthetic goals with personalized care and proven results.
+              Every treatment is customized to your unique goals, skin type, and lifestyle. We use only FDA-approved products and the latest technology to ensure your safety, comfort, and satisfaction.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
