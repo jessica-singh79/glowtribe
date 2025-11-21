@@ -33,16 +33,24 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-12 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <Sparkles className={`h-8 w-8 ${isScrolled ? 'text-sage-600' : 'text-white'}`} />
-            <span className={`text-2xl font-serif font-bold ${isScrolled ? 'text-sage-900' : 'text-white'}`}>
-              Glow Tribe
+          <div 
+            className="flex flex-col items-start cursor-pointer" 
+            onClick={() => scrollToSection('hero')}
+          >
+            <div className="flex items-center space-x-2">
+              <Sparkles className={`h-7 w-7 ${isScrolled ? 'text-sage-600' : 'text-white'}`} />
+              <span className={`text-2xl font-serif font-bold ${isScrolled ? 'text-sage-900' : 'text-white'}`}>
+                Glow Tribe
+              </span>
+            </div>
+            <span className={`text-xs tracking-widest ml-9 ${isScrolled ? 'text-sage-600' : 'text-cream-200'}`}>
+              WHERE BEAUTY MEETS WELLNESS
             </span>
           </div>
 
@@ -56,8 +64,7 @@ export default function Navigation() {
 
             <div className="relative">
               <button
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
                 className={`flex items-center space-x-1 transition-colors ${
                   isScrolled ? 'text-sage-900 hover:text-sage-600' : 'text-white hover:text-cream-200'
                 }`}
@@ -68,8 +75,6 @@ export default function Navigation() {
 
               {isServicesOpen && (
                 <div
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
                   className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 animate-in fade-in slide-in-from-top-2 duration-200"
                 >
                   {services.map((service, index) => (
