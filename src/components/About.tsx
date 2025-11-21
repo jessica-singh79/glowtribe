@@ -55,7 +55,7 @@ export default function About() {
                 className="rounded-lg shadow-lg object-cover h-64 w-full -mt-8"
               />
               <img
-                src="https://images.pexels.com/photos/3985321/pexels-photo-3985321.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://raw.githubusercontent.com/jessica-singh79/glowtribe/main/pexels-shvetsa-4586713.jpg"
                 alt="Medical spa therapy"
                 className="rounded-lg shadow-lg object-cover h-64 w-full"
               />
