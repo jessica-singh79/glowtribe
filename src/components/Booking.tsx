@@ -22,6 +22,32 @@ export default function Booking() {
     return () => observer.disconnect();
   }, []);
 
+  // Load Calendly widget script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    const link = document.createElement('link');
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    return () => {
+      document.body.removeChild(script);
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/jessicasingh7900/30min'
+      });
+    }
+  };
+
   return (
     <section id="booking" ref={sectionRef} className="py-24 bg-gradient-to-b from-sage-50 to-cream-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,20 +112,25 @@ export default function Booking() {
         </div>
         
         <div
-          className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-1000 delay-200 ${
+          className={`bg-white rounded-2xl shadow-2xl p-12 text-center transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="calendly-inline-widget" style={{ minHeight: '700px' }}>
-            <iframe
-              src="https://calendly.com/jessicasingh7900/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=3d493e&primary_color=5f7361"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Book Appointment"
-              style={{ border: 'none' }}
-            ></iframe>
-          </div>
+          <h3 className="text-2xl font-serif font-bold text-sage-900 mb-4">
+            Ready to Begin Your Journey?
+          </h3>
+          <p className="text-sage-600 mb-8 max-w-xl mx-auto leading-relaxed">
+            Click below to schedule your complimentary consultation. We'll discuss your goals and create a personalized treatment plan designed just for you.
+          </p>
+          <button
+            onClick={openCalendly}
+            className="inline-block bg-sage-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-sage-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 cursor-pointer"
+          >
+            Schedule Your Consultation
+          </button>
+          <p className="text-sm text-sage-500 mt-6">
+            Free 30-minute consultation • No obligation
+          </p>
         </div>
       </div>
     </section>
