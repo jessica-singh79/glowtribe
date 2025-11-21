@@ -30,59 +30,64 @@ export default function About() {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-24 bg-cream-50">
+    <section id="about" ref={sectionRef} className="py-16 md:py-24 bg-cream-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Images - Mobile optimized */}
           <div
             className={`transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <div className="grid grid-cols-2 gap-4">
+            {/* Desktop: 2x2 grid, Mobile: 2 images side by side */}
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               <img
-               src="https://images.pexels.com/photos/3985322/pexels-photo-3985322.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/3985363/pexels-photo-3985363.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Facial treatment consultation"
-                className="rounded-lg shadow-lg object-cover h-64 w-full"
+                className="rounded-lg shadow-lg object-cover h-48 md:h-64 w-full"
               />
               <img
                 src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Injectable treatment"
-                className="rounded-lg shadow-lg object-cover h-64 w-full mt-8"
+                className="rounded-lg shadow-lg object-cover h-48 md:h-64 w-full md:mt-8"
               />
+              {/* Hidden on mobile, shown on desktop */}
               <img
                 src="https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Aesthetic skincare treatment"
-                className="rounded-lg shadow-lg object-cover h-64 w-full -mt-8"
+                className="hidden md:block rounded-lg shadow-lg object-cover h-64 w-full -mt-8"
               />
               <img
                 src="https://raw.githubusercontent.com/jessica-singh79/glowtribe/main/pexels-shvetsa-4586713.jpg"
-                alt="Medical spa therapy"
-                className="rounded-lg shadow-lg object-cover h-64 w-full"
+                alt="Medical spa treatment"
+                className="hidden md:block rounded-lg shadow-lg object-cover h-64 w-full"
               />
             </div>
           </div>
 
+          {/* Text content - Mobile optimized */}
           <div
             className={`transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-sage-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-sage-900 mb-4 md:mb-6">
               Where Expertise Meets Artistry
             </h2>
-            <p className="text-lg text-sage-700 mb-6 leading-relaxed">
-              At Glow Tribe, we believe beauty is personal. Our board-certified team brings over 15 years of experience in aesthetic medicine, combining clinical expertise with an artist's eye to deliver natural, confidence-boosting results.
+            <p className="text-base md:text-lg text-sage-700 mb-4 md:mb-6 leading-relaxed">
+              Our board-certified team brings over 15 years of experience in aesthetic medicine, combining clinical expertise with an artist's eye to deliver natural, confidence-boosting results.
             </p>
-            <p className="text-lg text-sage-700 mb-8 leading-relaxed">
-              Every treatment is customized to your unique goals, skin type, and lifestyle. We use only FDA-approved products and the latest technology to ensure your safety, comfort, and satisfaction.
+            <p className="text-base md:text-lg text-sage-700 mb-6 md:mb-8 leading-relaxed">
+              Every treatment is customized to your unique goals, skin type, and lifestyle using only FDA-approved products.
             </p>
 
-            <div className="grid grid-cols-2 gap-6">
+            {/* Values grid - Mobile optimized */}
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
               {values.map((value, index) => (
                 <div key={index} className="flex flex-col items-start">
-                  <value.icon className="h-8 w-8 text-sage-600 mb-2" />
-                  <h3 className="font-semibold text-sage-900 mb-1">{value.title}</h3>
-                  <p className="text-sm text-sage-600">{value.description}</p>
+                  <value.icon className="h-6 w-6 md:h-8 md:w-8 text-sage-600 mb-1 md:mb-2" />
+                  <h3 className="font-semibold text-sage-900 mb-1 text-sm md:text-base">{value.title}</h3>
+                  <p className="text-xs md:text-sm text-sage-600 leading-snug">{value.description}</p>
                 </div>
               ))}
             </div>
