@@ -21,7 +21,7 @@ export default function Footer() {
               Where beauty meets wellness. Discover your natural radiance with expert aesthetic care.
             </p>
             <div className="flex space-x-4">
-              
+              <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export default function Footer() {
               >
                 <Facebook className="h-6 w-6" />
               </a>
-              
+              <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
