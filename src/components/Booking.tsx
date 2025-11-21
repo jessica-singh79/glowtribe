@@ -69,7 +69,7 @@ export default function Booking() {
         >
           <div className="aspect-[16/9] w-full">
             <iframe
-              src="https://calendly.com/"
+              src="https://cal.com/singh-singh/15min"
               width="100%"
               height="100%"
               frameBorder="0"
