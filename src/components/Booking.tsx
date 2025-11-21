@@ -48,7 +48,7 @@ export default function Booking() {
               <Mail className="h-6 w-6 text-sage-600" />
               <div className="text-left">
                 <p className="text-sm text-sage-500">Email Us</p>
-                <p className="text-lg font-semibold text-sage-900">hello@glowtribe.com</p>
+                <p className="text-lg font-semibold text-sage-900">hello@glowtribes.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -62,28 +62,25 @@ export default function Booking() {
         </div>
         
         <div
-          className={`bg-white rounded-2xl shadow-2xl p-12 text-center transition-all duration-1000 delay-200 ${
+          className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h3 className="text-2xl font-serif font-bold text-sage-900 mb-4">
-            Ready to Begin Your Journey?
-          </h3>
-          <p className="text-sage-600 mb-8 max-w-xl mx-auto leading-relaxed">
-            Click below to schedule your complimentary consultation. We'll discuss your goals and create a personalized treatment plan designed just for you.
-          </p>
-          <a
-            href="https://calendly.com/jessicasingh7900/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-sage-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-sage-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
-          >
-            Schedule Your Consultation
-          </a>
-          <p className="text-sm text-sage-500 mt-6">
-            Free 30-minute consultation • No obligation
-          </p>
+          <div className="w-full" style={{ minHeight: '700px' }}>
+            <iframe
+              src="https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MThj4j0qcE7fo62PnbxQFt9fqlPvApNZxLc6AklxR6G+QVk0KBOJJuE7BiFGLO1nL8SXJQBFT8gPHM0fMcV0TWKMxHUYvZmcZT/vzYGwLl4="
+              width="100%"
+              height="700"
+              frameBorder="0"
+              title="Book Appointment"
+              className="w-full"
+            ></iframe>
+          </div>
         </div>
+
+        <p className="text-center text-sage-600 mt-6 text-sm">
+          Powered by Vagaro booking system (can integrate with any booking platform)
+        </p>
       </div>
     </section>
   );
