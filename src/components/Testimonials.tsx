@@ -38,7 +38,7 @@ export default function Testimonials() {
     {
       name: 'Amanda R.',
       treatment: 'Laser Hair Removal',
-      text: 'Finally saying goodbye to razors and waxing! The treatments were quick and way less painful than I expected. Best investment in myself I've made.',
+      text: 'Finally saying goodbye to razors and waxing! The treatments were quick and way less painful than I expected. Best investment in myself I have made.',
       rating: 5,
     },
   ];
