@@ -31,15 +31,15 @@ export default function Hero() {
         <div className="absolute inset-0 bg-sage-900/40"></div>
       </div>
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-       <h1
-  className={`text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 transition-all duration-1000 tracking-tight leading-tight ${
-    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-  }`}
->
-  FEEL LIKE YOURSELF, ONLY BETTER
-</h1>
+        <h1
+          className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-6 transition-all duration-1000 tracking-tight leading-tight ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          FEEL LIKE YOURSELF, ONLY BETTER
+        </h1>
         <p
-          className={`text-xl md:text-xl text-cream-100 mb-10 max-w-3xl mx-auto transition-all duration-1000 delay-200 font-light ${
+          className={`text-xl md:text-2xl text-cream-100 mb-10 max-w-3xl mx-auto transition-all duration-1000 delay-200 font-light ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
