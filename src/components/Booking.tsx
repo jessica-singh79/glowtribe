@@ -36,7 +36,6 @@ export default function Booking() {
           <p className="text-lg text-sage-600 max-w-2xl mx-auto mb-8">
             Take the first step towards your transformation. Schedule your personalized consultation today.
           </p>
-
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             <div className="flex items-center space-x-3">
               <Phone className="h-6 w-6 text-sage-600" />
@@ -61,13 +60,12 @@ export default function Booking() {
             </div>
           </div>
         </div>
-
         <div
           className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="aspect-[16/9] w-full">
+          <div className="w-full" style={{ height: '700px' }}>
             <iframe
               src="https://cal.com/singh-singh/15min"
               width="100%"
@@ -78,10 +76,6 @@ export default function Booking() {
             ></iframe>
           </div>
         </div>
-
-        <p className="text-center text-sage-600 mt-8 text-sm">
-          Note: Replace the iframe src with your actual booking system URL
-        </p>
       </div>
     </section>
   );
