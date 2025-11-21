@@ -96,7 +96,7 @@ export default function Booking() {
           <p className="text-sage-600 mb-8 max-w-xl mx-auto leading-relaxed">
             Click below to schedule your complimentary consultation. We'll discuss your goals and create a personalized treatment plan designed just for you.
           </p>
-          
+          <a
             href="https://calendly.com/jessicasingh7900/30min"
             target="_blank"
             rel="noopener noreferrer"
