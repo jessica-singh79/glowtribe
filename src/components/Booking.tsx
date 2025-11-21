@@ -60,21 +60,29 @@ export default function Booking() {
             </div>
           </div>
         </div>
+        
         <div
-          className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-1000 delay-200 ${
+          className={`bg-white rounded-2xl shadow-2xl p-12 text-center transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="w-full" style={{ height: '700px' }}>
-            <iframe
-              src="https://cal.com/singh-singh/15min"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              title="Book Appointment"
-              className="w-full h-full"
-            ></iframe>
-          </div>
+          <h3 className="text-2xl font-serif font-bold text-sage-900 mb-4">
+            Ready to Begin Your Journey?
+          </h3>
+          <p className="text-sage-600 mb-8 max-w-xl mx-auto leading-relaxed">
+            Click below to schedule your complimentary consultation. We'll discuss your goals and create a personalized treatment plan designed just for you.
+          </p>
+          
+            href="https://calendly.com/jessicasingh7900/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-sage-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-sage-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
+          >
+            Schedule Your Consultation
+          </a>
+          <p className="text-sm text-sage-500 mt-6">
+            Free 30-minute consultation • No obligation
+          </p>
         </div>
       </div>
     </section>
