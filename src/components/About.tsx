@@ -40,7 +40,7 @@ export default function About() {
           >
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/3985363/pexels-photo-3985363.jpeg?auto=compress&cs=tinysrgb&w=800"
+               src="https://images.pexels.com/photos/3985322/pexels-photo-3985322.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Facial treatment consultation"
                 className="rounded-lg shadow-lg object-cover h-64 w-full"
               />
