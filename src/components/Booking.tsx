@@ -22,32 +22,6 @@ export default function Booking() {
     return () => observer.disconnect();
   }, []);
 
-  // Load Calendly widget script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    const link = document.createElement('link');
-    link.href = 'https://assets.calendly.com/assets/external/widget.css';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
-
-    return () => {
-      document.body.removeChild(script);
-      document.head.removeChild(link);
-    };
-  }, []);
-
-  const openCalendly = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/jessicasingh7900/30min'
-      });
-    }
-  };
-
   return (
     <section id="booking" ref={sectionRef} className="py-24 bg-gradient-to-b from-sage-50 to-cream-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,12 +96,14 @@ export default function Booking() {
           <p className="text-sage-600 mb-8 max-w-xl mx-auto leading-relaxed">
             Click below to schedule your complimentary consultation. We'll discuss your goals and create a personalized treatment plan designed just for you.
           </p>
-          <button
-            onClick={openCalendly}
-            className="inline-block bg-sage-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-sage-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 cursor-pointer"
+          
+            href="https://calendly.com/jessicasingh7900/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-sage-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-sage-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
           >
             Schedule Your Consultation
-          </button>
+          </a>
           <p className="text-sm text-sage-500 mt-6">
             Free 30-minute consultation • No obligation
           </p>
