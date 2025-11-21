@@ -55,7 +55,7 @@ export default function Testimonials() {
             Client Love
           </h2>
           <p className="text-lg text-sage-600 max-w-2xl mx-auto">
-            Real results from real people who've experienced the Glow Tribe difference
+            Real results from real people who have experienced the Glow Tribe difference
           </p>
         </div>
 
