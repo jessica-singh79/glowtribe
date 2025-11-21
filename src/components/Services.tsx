@@ -47,11 +47,11 @@ export default function Services() {
       pricing: 'Starting at $350 per session',
     },
     {
-      title: 'Body Contouring',
-      image: 'https://images.pexels.com/photos/6663339/pexels-photo-6663339.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Non-invasive body sculpting and fat reduction treatments to enhance your natural contours without surgery.',
-      pricing: 'Packages from $1,200',
-    },
+  title: 'Body Contouring',
+  image: 'https://raw.githubusercontent.com/jessica-singh79/glowtribe/main/body.jpg',
+  description: 'Non-invasive body sculpting and fat reduction treatments to enhance your natural contours without surgery.',
+  pricing: 'Packages from $1,200',
+},
     {
       title: 'Medical Skincare',
       image: 'https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg?auto=compress&cs=tinysrgb&w=800',
