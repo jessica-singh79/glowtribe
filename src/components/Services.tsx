@@ -48,7 +48,7 @@ export default function Services() {
     },
     {
       title: 'Body Contouring',
-      image: 'https://images.pexels.com/photos/6663329/pexels-photo-6663329.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6663339/pexels-photo-6663339.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: 'Non-invasive body sculpting and fat reduction treatments to enhance your natural contours without surgery.',
       pricing: 'Packages from $1,200',
     },
