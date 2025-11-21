@@ -61,7 +61,6 @@ export default function Booking() {
           </div>
         </div>
 
-        {/* Integration Notice */}
         <div
           className={`bg-sage-50 border border-sage-200 rounded-xl p-6 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-100 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
