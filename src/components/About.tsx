@@ -33,28 +33,33 @@ export default function About() {
     <section id="about" ref={sectionRef} className="py-24 bg-cream-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-         <div className="grid grid-cols-2 gap-4">
-  <img
-    src="https://images.pexels.com/photos/3985363/pexels-photo-3985363.jpeg?auto=compress&cs=tinysrgb&w=800"
-    alt="Facial treatment consultation"
-    className="rounded-lg shadow-lg object-cover h-64 w-full"
-  />
-  <img
-    src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=800"
-    alt="Injectable treatment"
-    className="rounded-lg shadow-lg object-cover h-64 w-full mt-8"
-  />
-  <img
-    src="https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg?auto=compress&cs=tinysrgb&w=800"
-    alt="Aesthetic skincare treatment"
-    className="rounded-lg shadow-lg object-cover h-64 w-full -mt-8"
-  />
-  <img
-    src="https://images.pexels.com/photos/3985321/pexels-photo-3985321.jpeg?auto=compress&cs=tinysrgb&w=800"
-    alt="Medical spa therapy"
-    className="rounded-lg shadow-lg object-cover h-64 w-full"
-  />
-</div>
+          <div
+            className={`transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+            }`}
+          >
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="https://images.pexels.com/photos/3985363/pexels-photo-3985363.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Facial treatment consultation"
+                className="rounded-lg shadow-lg object-cover h-64 w-full"
+              />
+              <img
+                src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Injectable treatment"
+                className="rounded-lg shadow-lg object-cover h-64 w-full mt-8"
+              />
+              <img
+                src="https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Aesthetic skincare treatment"
+                className="rounded-lg shadow-lg object-cover h-64 w-full -mt-8"
+              />
+              <img
+                src="https://images.pexels.com/photos/3985321/pexels-photo-3985321.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Medical spa therapy"
+                className="rounded-lg shadow-lg object-cover h-64 w-full"
+              />
+            </div>
           </div>
 
           <div
