@@ -1,33 +1,6 @@
-import { useState } from 'react';
-import { Sparkles, MapPin, Phone, Mail, Facebook, Instagram, Send } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+import { Sparkles, MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setMessage('');
-
-    try {
-      const { error } = await supabase
-        .from('newsletter_subscriptions')
-        .insert([{ email, subscribed_at: new Date().toISOString() }]);
-
-      if (error) throw error;
-
-      setMessage('Thank you for subscribing!');
-      setEmail('');
-    } catch (error) {
-      setMessage('This email is already subscribed or there was an error.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -42,13 +15,13 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Sparkles className="h-8 w-8" />
-              <span className="text-2xl font-serif font-bold">Glow Tribe</span>
+              <span className="text-2xl font-serif font-bold">Glow Tribes</span>
             </div>
             <p className="text-cream-200 mb-4">
-              Where beauty meets wellness and science. Discover your natural radiance with us.
+              Where beauty meets wellness. Discover your natural radiance with expert aesthetic care.
             </p>
             <div className="flex space-x-4">
-              <a
+              
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,7 +29,7 @@ export default function Footer() {
               >
                 <Facebook className="h-6 w-6" />
               </a>
-              <a
+              
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -110,7 +83,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span className="text-cream-200">hello@glowtribe.com</span>
+                <span className="text-cream-200">hello@glowtribes.com</span>
               </li>
             </ul>
             <div className="mt-4">
@@ -122,39 +95,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+            <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
             <p className="text-cream-200 mb-4">
-              Subscribe to receive exclusive offers and beauty tips.
+              Follow us on social media for beauty tips, special offers, and wellness inspiration.
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email"
-                required
-                className="w-full px-4 py-2 rounded-lg bg-sage-800 text-white placeholder-cream-300 focus:outline-none focus:ring-2 focus:ring-cream-400"
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-cream-500 text-sage-900 px-4 py-2 rounded-lg hover:bg-cream-400 transition-colors font-semibold flex items-center justify-center space-x-2 disabled:opacity-50"
-              >
-                <span>{loading ? 'Subscribing...' : 'Subscribe'}</span>
-                <Send className="h-4 w-4" />
-              </button>
-            </form>
-            {message && (
-              <p className={`mt-2 text-sm ${message.includes('Thank you') ? 'text-cream-200' : 'text-red-300'}`}>
-                {message}
-              </p>
-            )}
+            <button
+              onClick={() => scrollToSection('booking')}
+              className="w-full bg-cream-500 text-sage-900 px-6 py-3 rounded-lg hover:bg-cream-400 transition-colors font-semibold"
+            >
+              Book Your Consultation
+            </button>
           </div>
         </div>
 
         <div className="border-t border-sage-700 pt-8 text-center">
           <p className="text-cream-200 text-sm">
-            &copy; {new Date().getFullYear()} Glow Tribe Medspa. All rights reserved.
+            &copy; {new Date().getFullYear()} Glow Tribes Medspa. All rights reserved.
           </p>
         </div>
       </div>
