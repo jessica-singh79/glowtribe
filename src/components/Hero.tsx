@@ -32,11 +32,11 @@ export default function Hero() {
       </div>
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <h1
-          className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-6 transition-all duration-1000 tracking-tight leading-tight ${
+          className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-serif font-bold text-white mb-6 transition-all duration-1000 tracking-tight leading-tight ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          FEEL LIKE YOURSELF, ONLY BETTER
+          FEEL LIKE YOURSELF,&nbsp;ONLY BETTER
         </h1>
         <p
           className={`text-xl md:text-2xl text-cream-100 mb-10 max-w-3xl mx-auto transition-all duration-1000 delay-200 font-light ${
